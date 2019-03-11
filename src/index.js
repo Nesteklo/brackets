@@ -22,7 +22,10 @@ module.exports = function check(str, bracketsConfig) {
     if(str[i] == '8'){
       l++;
     }  
-  }
+    if (j < 0) {
+      return false;
+    }
+  } 
 
   if ((j == 0) && ((k % 2) == 0) && ((m % 2) == 0) && ((l % 2) == 0)){
     return true;
